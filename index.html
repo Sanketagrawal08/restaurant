@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="main1">
+        <div class="nav">
+           <img src="new.png" alt="">
+           <div class="flex gap-12">
+            <h2>Home</h2>
+            <h2>About</h2>
+            <h2>Contact</h2></div>
+           </div>
+        
+           <div class="remaining">
+            <div class="left pt-10">
+                <h1>Welcome to Foodie-Fiesta</h1>
+                <h2>where taste meets tradition...</h2>
+                <div class="flex"><button id="reserve">RESERVE A TABLE</button><button id="order">ORDER NOW</button></div>
+            </div>
+            <div class="right"></div>
+           </div>
+       
+    </div>
+
+
+    <div class="main2 flex">
+        <div class="left2 w-[20%] h-[100%]" style="border-right: 1px solid black;">
+            <h1 class="text-black text-[2vw] pb-[10vh] border-b-2 border-gray-500"> <i class="ri-restaurant-line"></i>  Categories</h1>
+            <h4 class="text-[1.3vw] pt-[2vw] pl-[2vw]"> <i class="ri-bowl-line"></i> Indian</h4>
+            <h4 class="text-[1.3vw] pt-[1vh] pl-[2vw]"> <i class="ri-bowl-fill"></i> South Indian</h4>
+            <h4 class="text-[1.3vw] pt-[1vh] pl-[2vw]"> <i class="ri-restaurant-2-line"></i> Pizza</h4>
+            <h4 class="text-[1.3vw] pt-[1vh] pl-[2vw]"> <i class="ri-restaurant-2-fill"></i> Chinese</h4>
+            <h4 class="text-[1.3vw] pt-[1vh] pl-[2vw]"> <i class="ri-drinks-2-line"></i> Cold Coffee</h4>
+            <h4 class="text-[1.3vw] pt-[1vh] pl-[2vw]"> <i class="ri-drinks-2-fill"></i> Soup</h4>
+            <h4 class="text-[1.3vw] pt-[1vh] pl-[2vw]"> <i class="ri-bowl-fill"></i> Burger</h4>
+            <h4 class="text-[1.3vw] pt-[1vh] pl-[2vw]"> <i class="ri-goblet-2-fill"></i> Pav Bhaji</h4>
+            <h4 class="text-[1.3vw] pt-[1vh] pl-[2vw]"> <i class="ri-goblet-2-line"></i> Pasta</h4>
+        </div>
+        <div class="right2 w-[80%] h-[100%]">
+            <div class="upper w-[100%] h-[18%] flex items-center justify-between p-[2vw]" style="border-bottom: 1px solid black; background-color: rgb(255, 255, 255);">
+                <div><h1 class="text-[2vw]">Order Online</h1>
+                    <h1 class="text-gray-500"> <i class="ri-compass-3-line"></i> Live Tracking | <i class="ri-time-line"></i> 37 min  </h1>
+                    <div class="flex items-center gap-2 pt-[1.2vh]"><input type="checkbox"> <h1>veg only</h1></div></div>
+                <div><input id="search" type="text" placeholder="Search within menu"></div>
+            </div>  
+            <div class="rem w-[100%] flex h-[82%]">
+                   <div class="left3 w-[70%] flex flex-col">
+                    <div class="card rounded-lg flex flex items-center pl-[2vw] gap-[2vw] mt-4 ml-4">
+                       <div><img src="https://b.zmtcdn.com/data/dish_photos/64c/d5415e8637cf008eb69535fadd5aa64c.jpeg?fit=around|130:130&crop=130:130;*,*" alt=""></div>
+                       <div>
+                        <h1 class="text-[1.2vw] font-semibold">Butter Paneer Cheese Kulcha</h1>
+                        <h1 class="text-gray-600">Only at ₹367</h1>
+                        <h1 class="text-[0.9vw] ">A Combo of Buttter Paneer Masala & 2 Cheese Kulcha</h1>
+                        <h1><i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-line"></i></h1>
+                        <button id="add">Add</button>
+                    </div>
+                    </div>
+                    <div class="card rounded-lg flex flex items-center pl-[2vw] gap-[2vw] mt-4 ml-4">
+                        <div><img src="https://b.zmtcdn.com/data/dish_photos/091/b2009c098bbd8a3377ef83c01d2f2091.jpeg?fit=around|130:130&crop=130:130;*,*" alt=""></div>
+                        <div>
+                         <h1 class="text-[1.2vw] font-semibold">Butter Paneer Cheese Kulcha</h1>
+                         <h1 class="text-gray-600">Only at ₹167</h1>
+                         <h1 class="text-[0.9vw] ">Tawa- toasted ,crispy & folded dosa wrapped with <br> potato masala</h1>
+                          <h1><i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-half-fill"></i></h1>
+                         <button id="add">Add</button>
+                     </div>
+                     </div>
+                     <div class="card rounded-lg flex flex items-center pl-[2vw] gap-[2vw] mt-4 ml-4">
+                        <div><img src="https://b.zmtcdn.com/data/dish_photos/729/61fc8d1145f2d9f4af1108810110a729.png?fit=around|130:130&crop=130:130;*,*" alt=""></div>
+                        <div>
+                         <h1 class="text-[1.2vw] font-semibold">Onion Uttapam</h1>
+                         <h1 class="text-gray-600">Only at ₹142</h1>
+                         <h1 class="text-[0.9vw] ">Soft and spongy dosa stuffed with onion served with sambar.</h1>
+                         <h1><i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i></h1>
+                         <button id="add">Add</button>
+                     </div>
+                     </div>
+                     <div class="card rounded-lg flex flex items-center pl-[2vw] gap-[2vw] mt-4 ml-4">
+                        <div><img src="https://b.zmtcdn.com/data/dish_photos/cbd/545a4a0592d99550740a62471b6ebcbd.jpeg?fit=around|130:130&crop=130:130;*,*" alt=""></div>
+                        <div>
+                         <h1 class="text-[1.2vw] font-semibold">Cold Coffee with Ice cream</h1>
+                         <h1 class="text-gray-600">Only at ₹149</h1>
+                         <h1 class="text-[0.9vw] ">A Combo of Buttter Paneer Masala & 2 Cheese Kulcha</h1>
+                         <h1><i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i></h1>
+                         <button id="add">Add</button>
+                     </div>
+                     </div>
+                     <div class="card rounded-lg flex flex items-center pl-[2vw] gap-[2vw] mt-4 ml-4">
+                        <div><img src="https://b.zmtcdn.com/data/dish_photos/732/352174dcce860c8c1c73bccefdf24732.jpeg?fit=around|130:130&crop=130:130;*,*" alt=""></div>
+                        <div>
+                         <h1 class="text-[1.2vw] font-semibold">Veg Cheese Pasta</h1>
+                         <h1 class="text-gray-600">Only at ₹199</h1>
+                         <h1 class="text-[0.9vw] ">Extra Cheese [250 gm]</h1>
+                         <h1><i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i></h1>
+                         <button id="add">Add</button>
+                     </div>
+                     </div>
+                     <div class="card rounded-lg flex flex items-center pl-[2vw] gap-[2vw] mt-4 ml-4">
+                        <div><img src="https://b.zmtcdn.com/data/dish_photos/cb9/91d8615bb165daa44b885a6f87f5acb9.jpg?fit=around|130:130&crop=130:130;*,*" alt=""></div>
+                        <div>
+                         <h1 class="text-[1.2vw] font-semibold">Pav Bhaji</h1>
+                         <h1 class="text-gray-600">Only at ₹99</h1>
+                         <h1 class="text-[0.9vw] ">Mumbai style vegetable mixture served with 2 pair pav and salad</h1>
+                         <h1><i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i></h1>
+                         <button id="add">Add</button>
+                     </div>
+                     </div>
+                     <div class="card rounded-lg flex flex items-center pl-[2vw] gap-[2vw] mt-4 ml-4">
+                        <div><img src="https://b.zmtcdn.com/data/dish_photos/eef/a281862ecc91c2888a1efb1e212d1eef.jpeg?fit=around|130:130&crop=130:130;*,*" alt=""></div>
+                        <div>
+                         <h1 class="text-[1.2vw] font-semibold">Veg Burger (Double patty)</h1>
+                         <h1 class="text-gray-600">Only at ₹217</h1>
+                         <h1 class="text-[0.9vw] ">A Combo of Buttter Paneer Masala & 2 Cheese Kulcha</h1>
+                         <h1><i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i></h1>
+                         <button id="add">Add</button>
+                     </div>
+                     </div>
+                     <div class="card rounded-lg flex flex items-center pl-[2vw] gap-[2vw] mt-4 ml-4">
+                        <div><img src="https://b.zmtcdn.com/data/dish_photos/105/bf392b32803d614b330ef5a05b693105.jpeg?fit=around|130:130&crop=130:130;*,*" alt=""></div>
+                        <div>
+                         <h1 class="text-[1.2vw] font-semibold">Veg Paneer Mexican Sandwich</h1>
+                         <h1 class="text-gray-600">Only at ₹251</h1>
+                         <h1 class="text-[0.9vw] ">Total Quantity Served 1 Pc</h1>
+                         <h1><i class="ri-star-line"></i> <i class="ri-star-line"></i> <i class="ri-star-line"></i> <i class="ri-star-line"></i> <i class="ri-star-line"></i></h1>
+                         <button id="add">Add</button>
+                     </div>
+                     </div>
+                   </div>
+                   <div class="right3 w-[30%] bg-blue-400"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main3 bg-black"></div>
+    <div class="main4"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
