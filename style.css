@@ -220,10 +220,15 @@ input[type = "checkbox"]{
 #cartDiv{
     display: flex;
     display:none;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     overflow: auto;
+    border-radius: 0px;
 }
+.cartsection{
+    min-height: 60%;
+    overflow-y: auto;
 
+}
 
 .nav-disabled{
     pointer-events: none;
@@ -419,4 +424,21 @@ background-color: white;
     font-size: 1.3vw;
     color: green;
     font-weight: 600;
+}
+
+.totalAmtDiv{
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+   border: 1px solid black;
+   justify-content: space-between;
+}
+
+.dv1{
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+.dv2{
+    font-size: 1.5vw;
+    font-weight: 500;
 }

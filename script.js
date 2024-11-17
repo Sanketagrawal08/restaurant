@@ -102,7 +102,7 @@ buttons.forEach(function(button){
         let card =  button.closest(".card");
         let name =  card.querySelector(".itemName").innerHTML;
         let price = parseFloat(card.querySelector(".itemPrice").innerHTML.replace('Only at ₹',''))
-       
+
         let img = card.querySelector(".img img").src;
 
         let existingItem = cartArr.find(function(item){
@@ -116,7 +116,7 @@ buttons.forEach(function(button){
             // If the item doesn't exist, add it with quantity 1
             cartArr.push({ image: img, name: name, price: price, quantity: 1 });
         }
-        console.log(cartArr);
+
 
         display();
         
@@ -126,6 +126,8 @@ buttons.forEach(function(button){
 function display(){
     let cartDiv = document.querySelector(".cartsection")
     cartDiv.innerHTML = ""
+    cartDiv.style.height = '25%'
+    let totalAmt = 0;
 
     cartArr.forEach(function(item,index){
       let itemDiv = document.createElement("div")
@@ -151,6 +153,8 @@ function display(){
 
       nameDiv.innerText = `${item.name}`
       priceDiv.innerHTML = ` ₹ ${item.price * item.quantity}`
+    
+      totalAmt += item.price * item.quantity;
       
       let minusBtn = document.createElement("button")
       minusBtn.classList.add('minusBtn')
@@ -177,9 +181,11 @@ function display(){
 
       let quantityText = document.createElement("span")
       quantityText.textContent = item.quantity
-
       
-
+      var totalAmtDiv= document.createElement("div")
+      totalAmtDiv.classList.add('totalAmtDiv')
+      totalAmtDiv.innerHTML = `TOTAL AMOUNT - ₹ ${totalAmt}`
+     
     //  itemDiv.appendChild(img)
         quantityDiv.appendChild(minusBtn)
         quantityDiv.appendChild(quantityText)
@@ -190,6 +196,30 @@ function display(){
         itemDiv.appendChild(details)
         cartDiv.appendChild(itemDiv)
     })
+
+    let existingTotalDiv = document.querySelector('.totalAmtDiv')
+    if(existingTotalDiv){
+        existingTotalDiv.innerHTML = `To Pay: ₹ ${totalAmt}`;
+    } else{
+        let totalAmtDiv = document.createElement("div");
+        totalAmtDiv.classList.add("totalAmtDiv");
+        let dv1 = document.createElement("div")
+        let dv2 = document.createElement("div")
+        dv1.classList.add('dv1')
+        dv2.classList.add('dv2')
+        dv1.innerHTML = 'TOTAL AMOUNT - '
+        dv2.innerHTML = `₹ ${totalAmt}`
+        // totalAmtDiv.innerHTML = `To Pay: ₹ ${totalAmt}`;
+        totalAmtDiv.style.position = 'absolute'
+        totalAmtDiv.style.bottom = '0'
+        totalAmtDiv.style.display = 'flex'
+        totalAmtDiv.style.left ='0'
+        totalAmtDiv.style.width = "100%"
+        // totalAmtDiv.style.height = '20%'
+        totalAmtDiv.appendChild(dv1)
+        totalAmtDiv.appendChild(dv2)
+        cartDiv.appendChild(totalAmtDiv)
+    }
 }
 
 
