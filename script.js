@@ -98,7 +98,7 @@ let buttons = document.querySelectorAll(".addBtn");
 
 buttons.forEach(function(button){
     button.addEventListener("click",function(){
-        
+        var navCart = document.getElementById("navCart");
         let card =  button.closest(".card");
         let name =  card.querySelector(".itemName").innerHTML;
         let price = parseFloat(card.querySelector(".itemPrice").innerHTML.replace('Only at ₹',''))
@@ -116,8 +116,7 @@ buttons.forEach(function(button){
             // If the item doesn't exist, add it with quantity 1
             cartArr.push({ image: img, name: name, price: price, quantity: 1 });
         }
-
-
+        
         display();
         
 })
@@ -149,11 +148,8 @@ function display(){
       priceDiv.classList.add('priceDiv')
       quantityDiv.classList.add("quantityDiv")
 
-
-
       nameDiv.innerText = `${item.name}`
       priceDiv.innerHTML = ` ₹ ${item.price * item.quantity}`
-    
       totalAmt += item.price * item.quantity;
       
       let minusBtn = document.createElement("button")
@@ -185,6 +181,7 @@ function display(){
       var totalAmtDiv= document.createElement("div")
       totalAmtDiv.classList.add('totalAmtDiv')
       totalAmtDiv.innerHTML = `TOTAL AMOUNT - ₹ ${totalAmt}`
+
      
     //  itemDiv.appendChild(img)
         quantityDiv.appendChild(minusBtn)
@@ -232,3 +229,5 @@ aboutBtn.addEventListener("click",function(){
 
 var order = document.getElementById("order");
 var order_icon = document.querySelector("#order i");
+
+

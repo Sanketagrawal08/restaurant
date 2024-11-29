@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles.css?v=1.1">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     
-    <div class="main1 relative"> 
+    <div class="main1"> 
         <div id="sign-page" class="sign-page w-[20vw] p-[1vw] text-black h-[50vh] rounded-lg bg-gray-200 flex flex-col justify-evenly">
             <div class="san5 flex text-[1.8vw] justify-evenly items-center mb-4">  <h1 class="id"> <i class="ri-user-fill"></i> Customer-Id</h1> <i  id="cutBtn" class="ri-close-line cursor-pointer"></i> </div>
               <input class="rounded-lg w-[18vw] p-[1vw] border-[1px] border-black mb-4" type="text" placeholder="Your name">
@@ -157,8 +158,18 @@
                          <button class="addBtn" id="add">Add</button>
                      </div>
                      </div>
+                     <div class="card rounded-lg flex flex items-center pl-[2vw] gap-[2vw] mt-4 ml-4">
+                        <div class="img"><img  src="https://b.zmtcdn.com/data/dish_photos/282/6bff89ea47a84bebc08e88536e1ef282.jpeg?fit=around|130:130&crop=130:130;*,*" alt=""></div>
+                        <div>
+                         <h1 class="text-[1.2vw] font-semibold itemName">Manchow soup</h1>
+                         <h1 class="text-gray-600 itemPrice">Only at ₹81</h1>
+                         <h1 class="text-[0.9vw] itemDescription">Veg Preparation</h1>
+                         <h1><i class="ri-star-fill text-yellow-400 text-yellow-400 "></i> <i class="ri-star-fill text-yellow-400"></i> <i class="ri-star-fill text-yellow-400"></i> <i class="ri-star-fill text-yellow-400"></i> <i class="ri-star-half-line text-yellow-400"></i></h1>
+                         <button class="addBtn" id="add">Add</button>
+                     </div>
+                     </div>
                    </div>
-                   <div class="right3 w-[30%] flex flex-col justify-center">
+                   <div class="right3">
                        <h1 class="font-semibold text-[1.8vw] flex justify-center pt-[0.5vw] pb-[0.5vw] "> <i class="ri-gift-line pr-4"></i>  Deals For You</h1>
                        <div class="oval w-auto h-auto bg-gray-400 rounded-lg p-[1vw] mb-4">
                             <h1 class="font-semibold text-[1.2vw]">Extra Rs.30 Off</h1>
