@@ -386,9 +386,6 @@
 
 
      @media (max-width: 768px) {
-        .san5{
-            font-size: 3vw;
-        }
         .nav{
             position: fixed !important;
             white-space: nowrap;
@@ -445,6 +442,7 @@
        display: none;
       }
       #cartDiv{
+        overflow-x: hidden;
           width: 100%;
           margin-left: -1%;
           scale: 0.8;
@@ -585,13 +583,7 @@
       width: auto;
       height: auto;
       padding: 3vw;
-    }
-    .san5{
-      font-size: 6vw;
-      gap: 4vw;
-      padding: 5vw;
-      white-space: nowrap;
-      display: flex;
+      font-size: 5vw;
     }
   
     #sign-page input{
@@ -599,6 +591,12 @@
       padding: 4vw 3vw;
       display: flex;
       flex-direction: column;
+    }
+    .id{
+        font-size: 6vw;
+    }
+    #cutBtn{
+        font-size: 5vw;
     }
     #createAccount{
       padding: 2vw 5vw;
