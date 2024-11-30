@@ -53,6 +53,7 @@ cartBtn.addEventListener("click",function(){
        cartDiv.style.display = 'block'
        body.style.overflow = 'hidden'
        nav.classList.add('nav-disabled');
+      // main1.classList.add('blurreddd')
        flag2 = 1;
     }
     else{
@@ -91,7 +92,6 @@ createAccount.addEventListener("click",function(){
     }
 })
 
-
 var cartArr = [];
 
 let buttons = document.querySelectorAll(".addBtn");
@@ -127,7 +127,7 @@ function display(){
     cartDiv.innerHTML = ""
     cartDiv.style.height = '25%'
     let totalAmt = 0;
-
+ let totalQua = 0;
     cartArr.forEach(function(item,index){
       let itemDiv = document.createElement("div")
       itemDiv.classList.add("itemdiv")
@@ -151,7 +151,8 @@ function display(){
       nameDiv.innerText = `${item.name}`
       priceDiv.innerHTML = ` ₹ ${item.price * item.quantity}`
       totalAmt += item.price * item.quantity;
-      
+      totalQua += item.quantity
+
       let minusBtn = document.createElement("button")
       minusBtn.classList.add('minusBtn')
       minusBtn.textContent = "-"
@@ -181,9 +182,14 @@ function display(){
       var totalAmtDiv= document.createElement("div")
       totalAmtDiv.classList.add('totalAmtDiv')
       totalAmtDiv.innerHTML = `TOTAL AMOUNT - ₹ ${totalAmt}`
-
-     
+      totalQua += item.quantity;
+  
+      
+    
+      
+      
     //  itemDiv.appendChild(img)
+        
         quantityDiv.appendChild(minusBtn)
         quantityDiv.appendChild(quantityText)
         quantityDiv.appendChild(plusBtn)
@@ -194,6 +200,20 @@ function display(){
         cartDiv.appendChild(itemDiv)
     })
 
+    // console.log(totalQua);
+
+    var cur = document.getElementById("cur")
+    var currentDiv = document.querySelector("#cur .currentDiv");
+
+    if (!currentDiv) {
+        currentDiv = document.createElement("div");
+        currentDiv.classList.add("currentDiv");
+        cur.appendChild(currentDiv); // Append only once
+    }
+
+    // Set the total quantity divided by 2 (as per your requirement)
+    currentDiv.innerHTML = ` [${totalQua / 2}]`;
+    
     let existingTotalDiv = document.querySelector('.totalAmtDiv')
     if(existingTotalDiv){
         existingTotalDiv.innerHTML = `To Pay: ₹ ${totalAmt}`;
@@ -205,7 +225,7 @@ function display(){
         dv1.classList.add('dv1')
         dv2.classList.add('dv2')
         dv1.innerHTML = 'TOTAL AMOUNT - '
-        dv2.innerHTML = `₹ ${totalAmt}`
+        dv2.innerHTML = `₹ ${totalAmt} <span id="payBtn"> PLACE ORDER</span>`
         // totalAmtDiv.innerHTML = `To Pay: ₹ ${totalAmt}`;
         totalAmtDiv.style.position = 'absolute'
         totalAmtDiv.style.bottom = '0'
@@ -231,3 +251,57 @@ var order = document.getElementById("order");
 var order_icon = document.querySelector("#order i");
 
 
+gsap.to(nav,{
+    y:0
+})
+
+
+
+
+let cards = document.querySelectorAll('.card');
+var searchInput = document.getElementById("search");
+searchInput.addEventListener("input",function(){
+
+    const filterValue = searchInput.value.toLowerCase();
+   
+    cards.forEach(function(card){
+
+        const foodName = card.querySelector(".itemName").textContent.toLowerCase();
+     
+        if(foodName.includes(filterValue)){
+            card.style.display = "flex";
+        }else{
+            card.style.display = "none"
+        }
+    })
+})
+
+
+cur.addEventListener("click",function(){
+    if(flag2 === 0){
+        cartDiv.classList.remove('hidden')
+        cartDiv.style.display = 'block'
+        body.style.overflow = 'hidden'
+        nav.classList.add('nav-disabled');
+        flag2 = 1;
+     }
+     else{
+         cartDiv.classList.add('hidden')
+         cartDiv.style.display = 'none'
+         body.style.overflow = 'auto'
+         nav.classList.remove('nav-disabled');
+         flag2 = 0;
+     }
+})
+
+
+var twitter_icon = document.getElementById("twitter-icon");
+
+
+twitter_icon.addEventListener("click",function(){
+    window.open("https://x.com/Sanket_Agr19");
+})
+
+document.querySelector("#whatsapp-icon").addEventListener("click",function(){window.location.href = "tel:7987339131"})
+document.querySelector("#insta-icon").addEventListener("click",function(){window.open("https://www.instagram.com/sanket_agrawal08/")});
+document.querySelector("#github-icon").addEventListener("click",function(){window.open("https://github.com/Sanketagrawal08")})

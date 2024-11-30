@@ -20,7 +20,7 @@
               <input id="address" class="rounded-lg w-[18vw] p-[1vw] border-[1px] border-black mb-4" type="text"placeholder="Enter Address">
              <button id="createAccount" type="submit">Create</button>
             </div>
-        <div class=" menu absolute top-[80%] left-[90%] font-bold p-[2vw] cursor-pointer rounded-[50%]">MENU</div>
+        <div class=" menu absolute top-[80%] left-[90%] font-bold p-[2vw] cursor-pointer text-black rounded-[50%]">MENU</div>
         <div class="nav">
            <img src="new.png" alt="">
                 <div class="flex gap-12">
@@ -28,7 +28,7 @@
                     <h2 id="aboutBtn" class="cursor-pointer">About Us</h2>
                     <h2 id="contactBtn" class="cursor-pointer" >Your Order</h2>
                     <h2 id="sign-btn" class="cursor-pointer">Sign In</h2>
-                    <h2 id="cartBtn" class="cursor-pointer">Cart</h2>
+                    <h2 id="cartBtn" class="cursor-pointer border-2 border-black rounded-full pl-[0.5vw] pr-[0.5vw]"> <i class="ri-shopping-cart-line"></i> Cart</h2>
                 </div>
            </div>
         
@@ -37,7 +37,8 @@
                 <h1>Welcome to Foodie-Fiesta </h1>
                 <h2>where taste meets tradition...</h2>
                 <div class="temp flex"><button id="reserve">RESERVE A TABLE <i class="ri-arrow-right-s-line"></i> </button><button id="order">ORDER NOW <i class="ri-arrow-right-s-line"></i></button></div>
-                <h2 id="delivery" style="font-size: 1.5vw; padding-top: 4vh; font-family: cursive;"><i class="ri-map-pin-time-line saa"></i> <span class="saa">Delivering to</span> </h2>
+                <h2 id="delivery" style="font-size: 1.5vw; padding-top: 4vh; font-family: cursive;"><i class="ri-map-pin-time-line saa"></i>  <span class="saa">Delivering to</span> </h2>
+               <div class="w-[100vw] flex justify-center items-center"> <img id="gif" src="https://ik.imagekit.io/sheryians/ezgif.com-resize%20(3)_ij4IGOannC.gif?updatedAt=1690801019992" alt=""> </div>
             </div>
             <div class="right"></div>
            </div>
@@ -70,11 +71,12 @@
             <h4 class="text-[1.3vw] pt-[1vh] pl-[2vw]"> <i class="ri-goblet-2-line"></i> Pasta</h4></div>
         </div>
         <div class="right2 w-[80%] h-[100%]">
-            <div class="upper w-[100%] h-[18%] flex items-center justify-between p-[2vw]" style="border-bottom: 1px solid black; background-color: rgb(255, 255, 255);">
-                <div class="san2"><h1 class="text-[2vw]">Order Online</h1>
-                    <h1 id="san3" class="text-gray-500"> <i class="ri-compass-3-line"></i> Live Tracking | <i class="ri-time-line"></i> 37 min  </h1>
+            <div class="upper w-[100%] h-[18%] flex  items-center justify-between p-[2vw]" style="border-bottom: 1px solid black; background-color: rgb(255, 255, 255);">
+                <div class="san2"><h1 class="text-[2vw] ">Order Online</h1>
+                    <h1 id="san3" class="text-gray-500"> <i class="ri-compass-3-line text-black"></i> Live Tracking | <i class="ri-time-line text-black"></i> 37 min  </h1>
                     <div class="san4 flex items-center gap-2 pt-[1.2vh]"><input type="checkbox"> <h1>veg only</h1></div></div>
-                <div><input id="search" class="border-2" type="text" placeholder="Search within menu" onkeyup="searchFun()"></div>
+                <div id="cur" class="flex">CART -  </div>    
+                <div><input id="search" class="border-2" type="text" placeholder="Search within menu"></div>
             </div>  
             <div class="rem w-[100%] flex h-[82%]">
                    <div class="left3 w-[70%] flex flex-col">
@@ -91,7 +93,7 @@
                     <div class="card rounded-lg flex flex items-center pl-[2vw] gap-[2vw] mt-4 ml-4">
                         <div class="img"><img src="https://b.zmtcdn.com/data/dish_photos/091/b2009c098bbd8a3377ef83c01d2f2091.jpeg?fit=around|130:130&crop=130:130;*,*" alt=""></div>
                         <div>
-                         <h1 class="text-[1.2vw] font-semibold itemName">Butter Paneer Cheese Kulcha</h1>
+                         <h1 class="text-[1.2vw] font-semibold itemName">South-Indian Dosa</h1>
                          <h1 class="text-gray-600 itemPrice">Only at ₹167</h1>
                          <h1 class="text-[0.9vw] itemDescription">Tawa- toasted ,crispy & folded dosa wrapped with <br> potato masala</h1>
                           <h1><i class="ri-star-fill text-yellow-400"></i> <i class="ri-star-fill text-yellow-400"></i> <i class="ri-star-fill text-yellow-400"></i> <i class="ri-star-fill text-yellow-400"></i> <i class="ri-star-line-fill text-yellow-400"></i></h1>
@@ -199,7 +201,7 @@
             <p>We take pride in using the freshest ingredients and crafting meals that bring people together. Join us and be a part of our food-loving family!</p>
             <p class="address">Indrapuri C-Sector, Bhopal, 462022 MP</p>
             <p class="address">Call us for more details - 7987339131</p>
-            <h2>Follow Us On - <i class="ri-twitter-fill text-blue-500"></i> <i class="ri-whatsapp-fill text-green-600"></i> <i class="ri-instagram-fill text-pink-600"></i> <i class="ri-telegram-fill text-blue-600"></i> <i class="ri-github-fill text-white"></i> </h2>
+            <h2>Follow Us On - <i id="twitter-icon" class="ri-twitter-x-fill text-white"></i> <i id="whatsapp-icon" class="ri-whatsapp-fill text-green-600"></i> <i id="insta-icon" class="ri-instagram-fill text-pink-600"></i>  <i id="github-icon" class="ri-github-fill text-white"></i> </h2>
     </div>
     </div>
 
