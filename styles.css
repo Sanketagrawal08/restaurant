@@ -386,6 +386,19 @@
 
 
      @media (max-width: 768px) {
+        .san5{
+            font-size: 3vw;
+        }
+        .nav{
+            position: fixed !important;
+            white-space: nowrap;
+        }
+        #cur{
+          display: flex;
+          justify-content: center;
+          scale: 2;
+          margin-bottom: 5%;
+        }
       body{
           overflow-x: hidden;
           width: 100%;
